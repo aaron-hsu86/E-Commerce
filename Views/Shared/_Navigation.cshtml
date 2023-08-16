@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-start gap-3 mt-2 ms-4">
+    @if(ViewData["Title"] == "Dashboard")
+    {
+        <p>Dashboard</p>
+    }else
+    {
+        <a asp-controller="Home" asp-action="Index">Dashboard</a>
+    }
+    |
+    @if(ViewData["Title"] == "Products")
+    {
+        <p>Products</p>
+    }else
+    {
+        <a asp-controller="Product" asp-action="Index">Products</a>
+    }
+    |
+    @if(ViewData["Title"] == "Orders")
+    {
+        <p>Orders</p>
+    }else
+    {
+        <a asp-controller="Order" asp-action="Index">Orders</a>
+    }
+    |
+    @if(ViewData["Title"] == "Customers")
+    {
+        <p>Customers</p>
+    }else
+    {
+        <a asp-controller="Customer" asp-action="Index">Customers</a>
+    }
+</div>

@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Products";
+}
+@model List<Product>
+<div class="d-flex gap-3">
+    <div class="">
+        <h1><u>Add a new product</u></h1>
+        @await Html.PartialAsync("_AddProduct", new Product())
+    </div>
+    <div class="d-flex flex-wrap gap-1">
+    @foreach (Product p in Model)
+    {
+        <div class="card card-dark shadow rounded p-3 border border-dark text-dark" id="prodIcon">
+            <img src="@p.ImageUrl" alt="@p.Name" class="card-img-top">
+            <p class="card-title text-center">@p.Name</p>
+            <p class="card-text text-center">@p.Quantity left</p>
+        </div>
+    }
+    </div>
+</div>

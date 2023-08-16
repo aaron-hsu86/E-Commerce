@@ -1,0 +1,9 @@
+@model Customer
+<form asp-controller="Customer" asp-action="Create" method="post">
+    <div class="d-flex gap-3 align-items-center">
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+        <input type="submit" value="Add" class="btn btn-success">
+    </div>
+    <span asp-validation-for="Name" class="text-danger"></span>
+</form>

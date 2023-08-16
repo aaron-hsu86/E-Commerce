@@ -1,0 +1,19 @@
+@model Product
+<form asp-controller="Product" asp-action="Create" method="post">
+    <div id="productForm" class="d-flex gap-3 justify-content-between">
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+    </div>
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <div id="productForm" class="d-flex gap-3 justify-content-between">
+        <label asp-for="ImageUrl"></label>
+        <input asp-for="ImageUrl">
+    </div>
+    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    <div id="productForm" class="d-flex gap-3 justify-content-between">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity">
+    </div>
+    <span asp-validation-for="Quantity" class="text-danger"></span><br>
+    <button class="btn btn-success">Create</button>
+</form>
